@@ -1,0 +1,218 @@
+ /* *{
+    margin: 0%;
+    padding: 0%;
+}
+#parent5{
+    height: 100vh;
+    width: 100%;
+    background-color: #FFFBF0;
+    border:2px solid rgb(2, 52, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#child5{
+    height:680px;
+    width:580px;
+    border: 2px solid rgb(10, 91, 10);
+}
+#child5-part21{
+    height:70px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(9, 119, 9)
+}
+#child5-part22{
+    height: 80px;
+    width: 100%;
+    border: 2px solid rgb(18, 170, 170);
+    align-items: center;
+}
+#child5-part23{
+    height:70px;
+    width:100%;
+    border: 2px solid rgb(50, 224, 50);
+    display: flex;
+}
+#part23-personal1{
+    height:100%;
+    width:37%;
+    border: 2px solid red;
+    display:flex;
+    align-items:center;
+}
+#personal21{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    background-color:#FF6900 ;
+    border:2px solid black;
+    color:#FFFFFF;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+#part23-Messinfo1{
+    height:100%;
+    width:38%;
+    border: 2px solid red;
+    display:flex;
+    align-items:center;
+}
+#messinfo22{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    background-color:#FF6900 ;
+    border:2px solid black;
+    color:#FFFFFF;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+#part23-confirm1{
+    height:100%;
+    width:23%;
+    border: 2px solid red;
+    display:flex;
+    align-items:center;
+}
+#confirm23{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    background-color:#FF6900 ;
+    border:2px solid black;
+    color:#FFFFFF;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+} */
+/* #child5-part24{
+    height:400px;
+    width:100%;
+    border:0.67px solid #FEF9C2;
+    background-color:#FFFFFF;
+    border-radius:16px;
+    box-shadow: 5px 5px 10px  #2C1810;
+} */
+/* #part24-box21{
+    height: 50px;
+    width: 100%;
+    border:2px solid chartreuse;
+    display: flex;
+    align-items: center;
+} */
+/* #box21-p{
+    font-size:22px;
+    font-weight:400;
+    font-style:normal;
+    color:#292524;
+    margin-left:43px;
+} */
+/* #part24-box22{
+    height: 275px;
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+/* #box22-part21{
+      height: 255px;
+      width: 555px;
+      border: 1px solid #FFF085;
+      border-radius: 15px;
+      background-color: #FEFCE8;
+} */
+/* .data{
+    border:2px solid lawngreen;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.data-p{
+    font-size:18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #79716B;
+    margin-left: 20px;
+}
+#part24-box25{
+    height:65px;
+    width: 100%;
+    border:2px solid fuchsia;
+    display: flex;
+}
+#box25-part21{
+    height: 100%;
+    width: 50%;
+    border: 2px solid cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn21{
+    height:50px;
+    width:240px;
+    border-radius:10px;
+    background-color:#FFFFFF;
+    border: 1.5px solid #FFF085;
+    font-style:normal;
+    font-weight:400;
+    font-size:15px;
+    color:#57534D;
+}
+#btn21:hover{
+    background-color: #FEFCE8;
+    border:1px solid #FFF085;
+    box-shadow: 2px 3px 6px #9c5606;
+}
+#box25-part22{
+    height: 100%;
+    width: 50%;
+    border: 2px solid cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn22{
+    height:50px;
+    width:240px;
+    border-radius:10px;
+    background-color:#FF6900;
+    border: 1.5px solid #FFF085;
+    font-style:normal;
+    font-weight:400;
+    font-size:15px;
+    color:#FFFFFF;
+    
+}
+#btn22:hover{
+    background-color: #fe9722;
+    border:1px solid #FFF085;
+    box-shadow: 2px 3px 6px #9c5606;
+}
+#child5-part26{
+    height: 30px;
+    width: 100%;
+    border:2px solid rgb(27, 223, 27);
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  */

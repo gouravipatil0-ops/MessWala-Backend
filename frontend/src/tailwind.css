@@ -1,0 +1,40 @@
+﻿/* Preserve CSS variables */
+:root {
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #2c1810;
+  --bg-muted: #79716b;
+  --bg-light: #fffbf0;
+
+  /* Brand */
+  --brand-gold: #ffb900;
+  --brand-orange: #ff6900;
+  --brand-deep-orange: #bb4d00;
+  --brand-brown: #2c1810;
+  --brand-light: #fefce8;
+  --brand-bg: #fef9c2;
+
+  /* Border */
+  --border-primary: #f0e9d8;
+  --border-gold: #ffb900;
+  --border-orange: #ff6900;
+  --border-light: #fff085;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-dark: #2c1810;
+  --text-muted: #79716b;
+  --text-light: #a6a09b;
+  --text-brown: #bb4d00;
+
+  /* Accent */
+  --accent-yellow: #fff085;
+  --accent-gray: #a6a09b;
+
+  /* Gradient */
+  --brand-gradient: linear-gradient(135deg, #ffb900 0%, #ff6900 100%);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

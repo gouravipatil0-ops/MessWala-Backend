@@ -1,0 +1,5510 @@
+/* ===========================================================================================================
+    Start------------------
+    
+    Above Style is of Sidebar And Header , Do Not Edit , Ask Me Before Editing This Style , If You Edit This Style Without My Permission Then I Will Not Be Responsible For Any Issue
+============================================================================================================= */
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #2c1810;
+  --bg-muted: #79716b;
+  --bg-light: #fffbf0;
+
+  /* Brand */
+  --brand-gold: #ffb900;
+  --brand-orange: #ff6900;
+  --brand-deep-orange: #bb4d00;
+  --brand-brown: #2c1810;
+  --brand-light: #fefce8;
+  --brand-bg: #fef9c2;
+
+  /* Border */
+  --border-primary: #f0e9d8;
+  --border-gold: #ffb900;
+  --border-orange: #ff6900;
+  --border-light: #fff085;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-dark: #2c1810;
+  --text-muted: #79716b;
+  --text-light: #a6a09b;
+  --text-brown: #bb4d00;
+
+  /* Accent */
+  --accent-yellow: #fff085;
+  --accent-gray: #a6a09b;
+
+  /* Gradient */
+  --brand-gradient: linear-gradient(135deg, #ffb900 0%, #ff6900 100%);
+}
+
+/* ================================
+   GLOBAL DASHBOARD LAYOUT
+================================ */
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: #fffdf7;
+  color: #333333;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 224px;
+  height: 617px;
+
+  background: #ffffff;
+  border-right: 1px solid #f0e9d8;
+
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Logo */
+
+.logo-section {
+  height: 67px;
+  width: 223px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 5px 10px;
+
+  border-bottom: 1px solid #f3eddc;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff7300;
+  color: #ffffff;
+
+  border-radius: 6px;
+}
+
+.logo-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text h2 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333333;
+}
+
+.logo-text span {
+  margin-top: 2px;
+
+  font-size: 14px;
+  color: #999999;
+}
+
+/* Sidebar Menu */
+
+.sidebar-menu {
+  padding: 7px 0;
+}
+
+.menu-item {
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 10px;
+  margin-bottom: 14px;
+
+  color: #777777;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  border-right: 2px solid transparent;
+
+  transition: all 0.2s ease;
+}
+
+.menu-item svg {
+  flex-shrink: 0;
+  color: #888888;
+}
+
+.menu-item:hover {
+  background: #fff8ec;
+  color: #f36f00;
+}
+
+.menu-item:hover svg {
+  color: #f36f00;
+}
+
+/* Active menu */
+
+.menu-item.active {
+  color: #f45f00;
+
+  background: #fff5e8;
+
+  border-right: 2px solid #ff6800;
+
+  font-weight: 500;
+}
+
+.menu-item.active svg {
+  color: #f45f00;
+}
+
+/* ================================
+   TOP HEADER
+================================ */
+
+.top-header {
+  position: fixed;
+
+  top: 0;
+  left: 223px;
+  right: 0;
+
+  height: 67px;
+  width: calc(100% - 223px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 13px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #f0e9d8;
+
+  z-index: 90;
+}
+
+/* Page title */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #333333;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.breadcrumb svg {
+  color: #ff6500;
+}
+
+/* Right header */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-box {
+  width: 177px;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 0 8px;
+
+  background: var(--brand-light);
+
+  border: 1px solid var(--border-light);
+  border-radius: 7px;
+}
+
+.search-box svg {
+  color: var(--brand-gold);
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: var(--brand-light);
+
+  font-size: 14px;
+  color: #555555;
+}
+
+.search-box input::placeholder {
+  color: #aaa38f;
+}
+
+/* ================================
+   DATE
+================================ */
+
+.date-box {
+  height: 28px;
+  width: 115px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 0 8px;
+
+  background: var(--brand-bg);
+
+  border: 1px solid #f2dfad;
+  border-radius: 7px;
+
+  color: #e86b00;
+
+  font-size: 8px;
+}
+
+.date-box span {
+  color: #d46b12;
+  font-size: 13px;
+}
+
+/* ================================
+   NOTIFICATION
+================================ */
+
+.notification {
+  position: relative;
+
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777777;
+
+  cursor: pointer;
+}
+
+.notification-dot {
+  position: absolute;
+
+  top: 5px;
+  right: 8px;
+
+  width: 8px;
+  height: 8px;
+
+  background: #ff6b00;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+/* ================================
+   ADMIN PROFILE
+================================ */
+
+.admin-profile {
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 0 14px 0 14px;
+
+  background: #fffaf0;
+
+  border: 1px solid #f0dfb8;
+  border-radius: 32px;
+
+  color: #555555;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.admin-avatar {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--brand-gradient);
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.admin-profile svg {
+  color: #8d8575;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+  position: relative;
+  margin-left: 223px;
+
+  min-height: 100vh;
+
+  width: calc(100% - 223px);
+
+  background: #fffdf7;
+}
+
+/* ===========================================================================================================
+    End------------------
+
+    Above Style is of Sidebar And Header , Do Not Edit , Ask Me Before Editing This Style , If You Edit This Style Without My Permission Then I Will Not Be Responsible For Any Issue
+============================================================================================================= */
+
+/* =========================================
+   COUPON PAGE
+========================================= */
+
+/* .content {
+ 
+  padding: 85px 8px 8px;
+
+  min-height: calc(100vh - 67px);
+
+  width: 100%;
+
+  background: #fffdf7;
+} */
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+/* 
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.page-heading h2 {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #333333;
+}
+
+.page-heading p {
+  margin: 3px 0 0;
+
+  font-size: 8px;
+  color: #999999;
+} */
+
+/* Add Coupon button */
+/* 
+.page-heading button {
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 0 11px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #ff6b00;
+  color: #ffffff;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.page-heading button:hover {
+  background: #e95e00;
+}
+
+.page-heading button svg {
+  width: 12px;
+  height: 12px;
+}
+
+.page-title {
+  display: flex;
+
+  align-items: center;
+  gap: 8px;
+}
+
+.page-title svg {
+  width: 18px;
+  height: 18px;
+
+  color: var(--brand-orange);
+}
+
+.page-title h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  color: #333333;
+}
+
+.page-actions button {
+  height: 36px;
+  width: 134px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ff6b00;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+} */
+
+/* =========================================
+   STATISTICS CONTAINER
+========================================= */
+
+/* .stats-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+
+  max-width: 416px;
+
+  margin-bottom: 12px;
+} */
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+/* .stat-card {
+  min-height: 148px;
+  min-width: 228px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #f0e5ca;
+  border-radius: 12px;
+
+  box-shadow: 0 1px 3px rgba(100, 75, 20, 0.04);
+} */
+
+/* Icon */
+
+/* .stat-card > svg {
+  width: 26px;
+  height: 26px;
+
+  margin-bottom: 12px;
+
+  color: #ff6900;
+} */
+
+/* Number */
+
+/* .stat-card > div {
+  margin-bottom: 5px;
+
+  font-size: 27px;
+  line-height: 27px;
+
+  font-weight: 500;
+
+  color: #333333;
+} */
+
+/* Label */
+
+/* .stat-card > span {
+  font-size: 16px;
+
+  color: #e26a1a;
+} */
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+/* .table-card {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #f0e5ca;
+
+  border-radius: 9px;
+
+  box-shadow: 0 1px 4px rgba(100, 75, 20, 0.04);
+} */
+
+/* =========================================
+   TABLE
+========================================= */
+
+/* .table-card table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+} */
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+/* .table-card thead {
+  background: var(--brand-light);
+}
+
+.table-card th {
+  height: 45px;
+
+  padding: 0 5px;
+
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #e65e0b;
+
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #f0e5ca;
+} */
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+/* .table-card td {
+  height: 53px;
+
+  padding: 6px 9px;
+
+  font-size: 13px;
+
+  color: #444444;
+
+  border-bottom: 1px solid #f3eee2;
+
+  vertical-align: middle;
+} */
+
+/* Last row */
+
+/* .table-card tbody tr:last-child td {
+  border-bottom: none;
+} */
+
+/* Hover */
+
+/* .table-card tbody tr:hover {
+  background: #fffdf8;
+} */
+
+/* =========================================
+   CUSTOMER NAME
+========================================= */
+
+/* .table-card td:first-child {
+  color: var(--text-dark);
+  font-weight: 400;
+} */
+
+/* =========================================
+   PLAN BADGE
+========================================= */
+
+/* .table-card .plan {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3px 7px;
+
+  background: var(--brand-bg);
+
+  border: 1px solid #f6e7a9;
+
+  border-radius: 10px;
+
+  color: var(--text-brown);
+
+  height: auto;
+  font-weight: 500;
+} */
+
+/* =========================================
+   NUMBERS
+========================================= */
+
+/* Total */
+
+/* .table-card td:nth-child(3) {
+  color: #444444;
+} */
+
+/* Used */
+
+/* .table-card td:nth-child(4) {
+  color: #ff4f2b;
+} */
+
+/* Remaining */
+
+/* .table-card td:nth-child(5) {
+  color: #19a653;
+} */
+
+/* Carry Forward */
+
+/* .table-card td:nth-child(6) {
+  color: #444444;
+} */
+
+/* =========================================
+   EXPIRY
+========================================= */
+
+/* .table-card td:nth-child(7) {
+  color: #999999;
+
+  font-size: 13px;
+
+  line-height: 10px;
+} */
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+/* .table-card td:last-child {
+  white-space: nowrap;
+} */
+
+/* Action buttons */
+
+/* .table-card td:last-child button {
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-right: 4px;
+
+  padding: 0 7px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+} */
+
+/* Pencil / Adjust */
+
+/* .table-card td:last-child button:first-child {
+  background: #fff0dc;
+
+  color: #ef6900;
+}
+
+.table-card td:last-child button:first-child:hover {
+  background: #ffe3c2;
+} */
+
+/* History */
+
+/* .table-card td:last-child button:last-child {
+  background: #fff8d8;
+
+  color: #a78300;
+}
+
+.table-card td:last-child button:last-child:hover {
+  background: #fff0b8;
+} */
+
+/* Action icons */
+
+/* .table-card td:last-child button svg {
+  width: 13px;
+  height: 13px;
+} */
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .stats-container {
+    max-width: 100%;
+  }
+
+  .table-card {
+    overflow-x: auto;
+  }
+
+  .table-card table {
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 120px;
+  }
+
+  .top-header {
+    left: 120px;
+  }
+
+  .content {
+    margin-left: 120px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 100%;
+  }
+
+  .header-right {
+    gap: 5px;
+  }
+
+  .search-box {
+    width: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .logo-text,
+  .menu-item span {
+    display: none;
+  }
+
+  .logo-section {
+    justify-content: center;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .top-header {
+    left: 60px;
+  }
+
+  .content {
+    margin-left: 60px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .breadcrumb span {
+    display: none;
+  }
+
+  .date-box {
+    display: none;
+  }
+
+  .admin-profile span {
+    display: none;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+ /* ==================================================
+        Coupon Modal 
+-=================================================== */
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+/* .modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  z-index: 2000;
+} */
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+/* .coupon-modal {
+  width: 418px;
+  max-width: calc(100vw - 30px);
+
+  background: #ffffff;
+
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+  font-family: "Inter", "Segoe UI", sans-serif;
+} */
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+/* .modal-header {
+  height: 57px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  border-bottom: 1px solid #eee8dc;
+} */
+
+/* .modal-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #333333;
+} */
+
+/* .modal-title svg {
+  color: #ff6500;
+  width: 16px;
+  height: 16px;
+} */
+
+/* .modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #aaa39a;
+
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #555;
+} */
+
+
+/* =========================================
+   MODAL BODY
+========================================= */
+
+/* .modal-body {
+  padding: 15px 16px 16px;
+} */
+
+
+/* =========================================
+   FORM LABEL
+========================================= */
+
+/* .modal-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #df5f16;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+} */
+
+
+/* =========================================
+   CUSTOMER SELECT
+========================================= */
+
+/* .customer-select {
+  width: 100%;
+  height: 31px;
+
+  padding: 0 11px;
+
+  border: 1px solid #f2d77b;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #444444;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.customer-select:focus {
+  border-color: #ff6500;
+} */
+
+
+/* =========================================
+   ACTION SECTION
+========================================= */
+
+/* .action-section {
+  margin-top: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.action-buttons button {
+  height: 25px;
+
+  padding: 0 11px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 8px;
+
+  cursor: pointer;
+} */
+
+
+/* Active action */
+
+/* .action-add {
+  border: 1px solid #ff6500;
+
+  background: #ff6500;
+
+  color: #ffffff;
+} */
+
+
+/* Other actions */
+
+/* .action-remove,
+.action-balance {
+  border: 1px solid #f0d36b;
+
+  background: #ffffff;
+
+  color: #777777;
+}
+
+.action-remove:hover,
+.action-balance:hover {
+  background: #fffaf0;
+} */
+
+
+/* =========================================
+   COUPON PLAN
+========================================= */
+
+/* .plan-section {
+  margin-top: 14px;
+}
+
+.plan-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 7px;
+} */
+
+
+/* =========================================
+   PLAN CARD
+========================================= */
+
+/* .plan-card {
+  position: relative;
+
+  min-height: 74px;
+
+  padding: 9px 10px;
+
+  border: 1px solid #f2d84f;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.plan-card:hover {
+  background: #fffdf4;
+} */
+
+
+/* Selected plan */
+
+/* .plan-card.selected {
+  border: 2px solid #ff6500;
+
+  background: #fff8ef;
+} */
+
+
+/* Plan name */
+
+/* .plan-name {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #444444;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.plan-card.selected .plan-name {
+  color: #ff6500;
+} */
+
+
+/* Description */
+
+/* .plan-description {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #999999;
+
+  font-size: 8px;
+} */
+
+
+/* Coupon info */
+
+/* .plan-coupon-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #ff6500;
+
+  font-size: 8px;
+}
+
+.plan-coupon-info svg {
+  width: 10px;
+  height: 10px;
+} */
+
+
+/* =========================================
+   BEST VALUE BADGE
+========================================= */
+
+/* .best-value {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  padding: 3px 6px;
+
+  border-radius: 8px;
+
+  background: #ff6500;
+
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 500;
+} */
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+/* .summary-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 13px;
+
+  min-height: 57px;
+
+  padding: 9px 11px;
+
+  border: 1px solid #f7d8b5;
+
+  border-radius: 9px;
+
+  background: #fff7ee;
+} */
+
+/* .summary-icon {
+  color: #ff6500;
+}
+
+.summary-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.summary-title {
+  color: #555555;
+
+  font-size: 10px;
+}
+
+.summary-text {
+  color: #9b4b17;
+
+  font-size: 8px;
+}
+
+.summary-text strong {
+  color: #b64d0c;
+} */
+
+
+/* =========================================
+   WARNING
+========================================= */
+
+/* .warning-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  margin-top: 11px;
+
+  padding: 9px 10px;
+
+  border-radius: 8px;
+
+  background: #fffced;
+
+  color: #b96d18;
+
+  font-size: 8px;
+
+  line-height: 12px;
+} */
+
+/* .warning-box svg {
+  flex-shrink: 0;
+
+  width: 11px;
+  height: 11px;
+
+  margin-top: 1px;
+
+  color: #e99518;
+} */
+
+
+/* =========================================
+   MODAL FOOTER
+========================================= */
+
+/* .modal-footer {
+  height: 61px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 13px;
+
+  padding: 0 16px;
+
+  border-top: 1px solid #eee8dc;
+
+  background: #ffffff;
+} */
+
+
+/* Cancel */
+
+/* .modal-cancel {
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.modal-cancel:hover {
+  color: #333333;
+} */
+
+
+/* Confirm */
+
+/* .modal-confirm {
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 13px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ff6500;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.modal-confirm:hover {
+  background: #e95d00;
+}
+
+.modal-confirm svg {
+  width: 12px;
+  height: 12px;
+} */
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .coupon-modal {
+    width: calc(100vw - 24px);
+  }
+
+  .modal-body {
+    padding: 14px;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-footer {
+    padding: 0 14px;
+  }
+}
+
+/* =========================================
+   ACTION BUTTON STATES
+========================================= */
+
+/* .action-buttons button {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.action-buttons .active {
+  background: #ff6500;
+  border-color: #ff6500;
+  color: #ffffff;
+} */
+
+
+/* =========================================
+   PLAN CARD BUTTON RESET
+========================================= */
+
+/* .plan-card {
+  width: 100%;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.plan-card.selected {
+  border: 2px solid #ff6500;
+  background: #fff8ef;
+} */
+
+
+/* =========================================
+   BALANCE
+========================================= */
+
+/* .balance-section {
+  margin-top: 14px;
+}
+
+.balance-input {
+  width: 100%;
+  height: 32px;
+
+  padding: 0 10px;
+
+  border: 1px solid #f2d77b;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 10px;
+
+  color: #444;
+}
+
+.balance-input:focus {
+  border-color: #ff6500;
+} */
+
+
+/* =========================================
+   CUSTOM FIELDS
+========================================= */
+
+/* .custom-fields {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  margin-top: 9px;
+} */
+
+/* .custom-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+} */
+
+/* .custom-field label {
+  color: #df5f16;
+
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.custom-field input {
+  width: 100%;
+  height: 30px;
+
+  padding: 0 9px;
+
+  border: 1px solid #f2d77b;
+  border-radius: 7px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 9px;
+} */
+
+/* .custom-field input:focus {
+  border-color: #ff6500;
+} */
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+/* .modal-error {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 6px;
+
+  margin-top: 9px;
+
+  padding: 8px 10px;
+
+  border-radius: 7px;
+
+  background: #fff0ed;
+
+  color: #d94b32;
+
+  font-size: 8px;
+
+  line-height: 12px;
+} */
+
+/* .modal-error svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+} */
+
+
+
+/* ===========================================================================================================
+      SUBSCRIPTIONS PAGE CSS
+===============================================================================================================*/
+
+/* =========================================
+   SUBSCRIPTIONS PAGE
+========================================= */
+
+/* .subscription-heading {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+} */
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+/* .subscription-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.subscription-title svg {
+  color: #ff6500;
+}
+
+.subscription-title h2 {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 18px;
+  font-weight: 500;
+} */
+
+
+/* =========================================
+   NEW SUBSCRIPTION
+========================================= */
+
+/* .subscription-add-btn {
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #ff6500;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.subscription-add-btn:hover {
+  background: #e95d00;
+} */
+
+
+/* =========================================
+   MONTHLY / YEARLY TABS
+========================================= */
+
+/* .subscription-tabs {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 16px;
+}
+
+.subscription-tab {
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 17px;
+
+  border: 1px solid #f2d979;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #777777;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.subscription-tab svg {
+  color: #777777;
+}
+
+.subscription-tab:hover {
+  background: #fffaf0;
+}
+
+.subscription-tab.active {
+  border-color: #ff6500;
+
+  background: #ff6500;
+
+  color: #ffffff;
+}
+
+.subscription-tab.active svg {
+  color: #ffffff;
+} */
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+/* .subscription-table-card {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #f1e4bf;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 5px rgba(110, 85, 20, 0.05);
+} */
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+/* .subscription-table-card table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+} */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* .subscription-table-card thead {
+  background: #fffdf0;
+}
+
+.subscription-table-card th {
+  height: 40px;
+
+  padding: 0 15px;
+
+  text-align: left;
+
+  color: #d95d16;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #f0e5c7;
+} */
+
+
+/* =========================================
+   BODY
+========================================= */
+
+/* .subscription-table-card td {
+  min-height: 72px;
+
+  padding: 14px 15px;
+
+  color: #555555;
+
+  font-size: 11px;
+
+  vertical-align: middle;
+
+  border-bottom: 1px solid #f2eee4;
+}
+
+.subscription-table-card tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.subscription-table-card tbody tr:hover {
+  background: #fffdf8;
+} */
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+/* .subscription-table-card th:nth-child(1),
+.subscription-table-card td:nth-child(1) {
+  width: 13%;
+}
+
+.subscription-table-card th:nth-child(2),
+.subscription-table-card td:nth-child(2) {
+  width: 15%;
+}
+
+.subscription-table-card th:nth-child(3),
+.subscription-table-card td:nth-child(3) {
+  width: 13%;
+}
+
+.subscription-table-card th:nth-child(4),
+.subscription-table-card td:nth-child(4) {
+  width: 12%;
+}
+
+.subscription-table-card th:nth-child(5),
+.subscription-table-card td:nth-child(5) {
+  width: 10%;
+}
+
+.subscription-table-card th:nth-child(6),
+.subscription-table-card td:nth-child(6) {
+  width: 10%;
+}
+
+.subscription-table-card th:nth-child(7),
+.subscription-table-card td:nth-child(7) {
+  width: 11%;
+}
+
+.subscription-table-card th:nth-child(8),
+.subscription-table-card td:nth-child(8) {
+  width: 16%;
+} */
+
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+/* .subscription-customer {
+  color: #3f3f3f !important;
+
+  font-size: 12px !important;
+
+  font-weight: 400;
+
+  line-height: 18px;
+} */
+
+
+/* =========================================
+   MEALS
+========================================= */
+
+/* .subscription-meals {
+  color: #888888 !important;
+
+  line-height: 16px;
+}
+
+.subscription-meals span {
+  display: inline;
+} */
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+/* .subscription-price {
+  color: #ff5d19 !important;
+
+  font-size: 12px !important;
+
+  white-space: nowrap;
+} */
+
+
+/* =========================================
+   COUPONS
+========================================= */
+
+/* .subscription-coupons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #555555 !important;
+}
+
+.subscription-coupons svg {
+  color: #ff6500;
+} */
+
+
+/* =========================================
+   DATE
+========================================= */
+
+/* .subscription-date {
+  color: #888888 !important;
+
+  line-height: 16px;
+
+  white-space: nowrap;
+} */
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+/* .subscription-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 39px;
+
+  padding: 5px 9px;
+
+  border-radius: 12px;
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+.subscription-status.paid {
+  background: #dff8e9;
+
+  color: #19a65a;
+
+  border: 1px solid #c2efd4;
+}
+
+.subscription-status.pending {
+  background: #ffe3e3;
+
+  color: #ed4e4e;
+
+  border: 1px solid #ffcaca;
+} */
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+/* .subscription-actions {
+  white-space: nowrap;
+}
+
+.subscription-actions button {
+  height: 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 10px;
+
+  margin-right: 5px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+} */
+
+
+/* PAY */
+
+/* .pay-btn {
+  border: 1px solid #d3e1ff;
+
+  background: #e4efff;
+
+  color: #2868d8;
+}
+
+.pay-btn:hover:not(:disabled) {
+  background: #d5e6ff;
+}
+
+.pay-btn:disabled {
+  cursor: default;
+
+  opacity: 0.65;
+} */
+
+
+/* EDIT */
+
+/* .edit-btn {
+  border: 1px solid #f5dcae;
+
+  background: #fff0d7;
+
+  color: #ef6900;
+}
+
+.edit-btn:hover {
+  background: #ffe4bd;
+} */
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+/* .subscription-empty {
+  height: 100px;
+
+  text-align: center !important;
+
+  color: #999999 !important;
+} */
+
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+/* .subscription-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(20, 18, 12, 0.55);
+} */
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+/* .subscription-modal {
+  width: 440px;
+
+  max-width: 100%;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+} */
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+/* .subscription-modal-header {
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 17px;
+
+  border-bottom: 1px solid #eee8dc;
+}
+
+.subscription-modal-header h3 {
+  margin: 0 0 3px;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  font-weight: 500;
+} */
+
+/* .subscription-modal-header span {
+  color: #999999;
+
+  font-size: 8px;
+}
+
+.subscription-close-btn {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #999999;
+
+  cursor: pointer;
+} */
+
+/* .subscription-close-btn:hover {
+  color: #333333;
+} */
+
+
+/* =========================================
+   FORM
+========================================= */
+
+/* .subscription-form {
+  padding: 17px;
+}
+
+.subscription-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-bottom: 12px;
+}
+
+.subscription-form-group label {
+  color: #d95f17;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+} */
+
+/* .subscription-form-group input,
+.subscription-form-group select {
+  width: 100%;
+
+  height: 33px;
+
+  padding: 0 10px;
+
+  border: 1px solid #efd87b;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #444444;
+
+  font-family: inherit;
+
+  font-size: 10px;
+} */
+
+/* .subscription-form-group input:focus,
+.subscription-form-group select:focus {
+  border-color: #ff6500;
+
+  box-shadow: 0 0 0 2px rgba(255, 101, 0, 0.08);
+} */
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+/* .subscription-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+} */
+
+
+/* =========================================
+   MODAL FOOTER
+========================================= */
+
+/* .subscription-modal-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 8px;
+
+  margin-top: 5px;
+
+  border-top: 1px solid #eee8dc;
+}
+
+.subscription-footer-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+} */
+
+
+/* =========================================
+   CANCEL
+========================================= */
+
+/* .subscription-cancel-btn {
+  height: 31px;
+
+  padding: 0 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  cursor: pointer;
+} */
+
+
+/* =========================================
+   SAVE
+========================================= */
+
+/* .subscription-save-btn {
+  height: 31px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 0 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ff6500;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.subscription-save-btn:hover {
+  background: #e95d00;
+} */
+
+
+/* =========================================
+   DELETE
+========================================= */
+
+/* .subscription-delete-btn {
+  height: 31px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 0 10px;
+
+  border: 1px solid #ffcaca;
+
+  border-radius: 7px;
+
+  background: #fff0f0;
+
+  color: #df4747;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.subscription-delete-btn:hover {
+  background: #ffe3e3;
+} */
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .subscription-table-card {
+    overflow-x: auto;
+  }
+
+  .subscription-table-card table {
+    min-width: 900px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .subscription-heading {
+    align-items: flex-start;
+
+    gap: 12px;
+
+    flex-direction: column;
+  }
+
+  .subscription-add-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .subscription-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-modal {
+    max-height: 94vh;
+  }
+}
+
+/* Subscriptions Modal */
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+/* .subscription-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(20, 18, 12, 0.58);
+
+  padding: 15px;
+} */
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+/* .subscription-modal {
+  width: 500px;
+
+  max-width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.22);
+} */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* .subscription-modal-header {
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 21px;
+
+  border-bottom: 1px solid #f1ead9;
+}
+
+
+.subscription-modal-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+} */
+
+
+/* .subscription-modal-title svg {
+  color: #ff6500;
+}
+
+
+.subscription-modal-title h3 {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 17px;
+
+  font-weight: 400;
+} */
+
+
+/* .subscription-close-btn {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #a3a3a3;
+
+  cursor: pointer;
+} */
+
+
+/* .subscription-close-btn:hover {
+  color: #555555;
+} */
+
+
+/* =========================================
+   FORM
+========================================= */
+
+/* .subscription-modal-form {
+  padding: 22px 21px 0;
+} */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+/* .subscription-modal-section {
+  margin-bottom: 17px;
+}
+
+
+.subscription-modal-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d65c18;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2px;
+} */
+
+
+/* =========================================
+   PLAN GRID
+========================================= */
+
+/* .subscription-plan-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+} */
+
+
+/* =========================================
+   PLAN CARD
+========================================= */
+
+/* .subscription-plan-card {
+  position: relative;
+
+  min-height: 91px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 14px 13px;
+
+  border: 1.5px solid #f1d957;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+
+.subscription-plan-card:hover {
+  background: #fffaf1;
+}
+
+
+.subscription-plan-card.selected {
+  border: 2px solid #ff6500;
+
+  background: #fff8ef;
+} */
+
+
+/* =========================================
+   PLAN ICON
+========================================= */
+
+/* .subscription-plan-icon {
+  color: #ff6500;
+
+  padding-top: 1px;
+}
+
+
+.subscription-plan-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+} */
+
+
+/* .subscription-plan-name {
+  color: #444444;
+
+  font-size: 12px;
+
+  font-weight: 400;
+}
+
+
+.subscription-plan-details {
+  color: #888888;
+
+  font-size: 10px;
+} */
+
+
+/* =========================================
+   DISCOUNT
+========================================= */
+
+/* .discount-badge {
+  position: absolute;
+
+  top: 8px;
+  right: 9px;
+
+  padding: 4px 8px;
+
+  border-radius: 10px;
+
+  background: #ff6500;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 500;
+} */
+
+
+/* =========================================
+   MEALS
+========================================= */
+
+/* .meal-selection {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+
+.meal-option {
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 11px;
+
+  border: 1px solid #f0df9c;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #555555;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.18s ease;
+} */
+
+
+/* .meal-option:hover {
+  background: #fffaf1;
+}
+
+
+.meal-option.selected {
+  border-color: #ff6500;
+
+  background: #fff8ef;
+
+  color: #444444;
+}
+
+
+.meal-option svg {
+  color: #ff6500;
+} */
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+/* .meal-checkbox {
+  width: 13px;
+  height: 13px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ff6500;
+
+  border-radius: 3px;
+
+  color: #ffffff;
+
+  background: #ffffff;
+} */
+
+
+/* .meal-option.selected .meal-checkbox {
+  background: #ff6500;
+
+  color: #ffffff;
+} */
+
+
+/* =========================================
+   DATES
+========================================= */
+
+/* .subscription-date-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-bottom: 17px;
+}
+
+
+.subscription-date-group {
+  display: flex;
+
+  flex-direction: column;
+} */
+
+
+/* .subscription-date-group input {
+  width: 100%;
+
+  height: 37px;
+
+  padding: 0 11px;
+
+  border: 1px solid #f0df9c;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #555555;
+
+  background: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 10px;
+} */
+
+
+/* .subscription-date-group input:focus {
+  border-color: #ff6500;
+} */
+
+
+/* =========================================
+   PAYMENT METHODS
+========================================= */
+
+/* .payment-methods {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.payment-option {
+  height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid #f0df9c;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #666666;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+
+.payment-option:hover {
+  background: #fffaf1;
+}
+
+
+.payment-option.selected {
+  border-color: #ff6500;
+
+  background: #ff6500;
+
+  color: #ffffff;
+} */
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* .subscription-modal-footer {
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 13px;
+
+  margin: 0 -21px;
+
+  padding: 0 21px;
+
+  border-top: 1px solid #f1ead9;
+} */
+
+
+/* .subscription-cancel-btn {
+  height: 36px;
+
+  padding: 0 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #666666;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+} */
+
+
+/* .subscription-save-btn {
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 16px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #ff6500;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+
+.subscription-save-btn:hover {
+  background: #e95d00;
+} */
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .subscription-modal {
+    max-height: 94vh;
+
+    overflow-y: auto;
+  }
+
+
+  .subscription-plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .subscription-date-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  .meal-selection {
+    gap: 7px;
+  }
+
+
+  .payment-methods {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+.subscription-customer-select {
+  width: 100%;
+  height: 38px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e7d9a7;
+  border-radius: 8px;
+
+  background: #fff;
+
+  color: #333;
+
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.subscription-customer-select:focus {
+  border-color: #ff6500;
+}
+
+.subscription-customer-select:hover {
+  border-color: #ff6500;
+}
+
+
+
+/*  =============================================================================
+    PAYMENTS PAGE
+ ============================================================================*/
+
+ /* =========================================
+   PAGE
+========================================= */
+
+/* .payments-page {
+  background: #fffdf3;
+  min-height: 100vh;
+  padding-top: 67px;
+  margin: 0 10px;
+} */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* .payments-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+} */
+
+
+/* .payments-page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+} */
+
+
+/* .payments-page-title svg {
+  color: #ff6500;
+} */
+
+
+/* .payments-page-title h2 {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #333;
+} */
+
+
+/* .payments-add-btn {
+  height: 33px;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #ff6500;
+  color: white;
+
+  font-size: 11px;
+
+  cursor: pointer;
+} */
+
+
+/* .payments-add-btn span {
+  font-size: 17px;
+  line-height: 1;
+} */
+
+
+/* =========================================
+   SUMMARY GRID
+========================================= */
+
+/* .payment-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 26px;
+
+  margin-bottom: 17px;
+} */
+
+
+/* .payment-summary-card {
+  min-height: 63px;
+
+  padding: 9px 10px;
+
+  border: 1px solid #f1e4b8;
+
+  border-radius: 11px;
+
+  background: #fff;
+
+  box-shadow:
+    0 2px 5px rgba(100, 80, 20, 0.08);
+} */
+
+
+/* .summary-card-icon {
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+
+  color: #ff6500;
+
+  font-size: 15px;
+
+  margin-bottom: 3px;
+} */
+
+/* 
+.summary-card-amount {
+  font-size: 15px;
+
+  color: #444;
+
+  margin-bottom: 2px;
+} */
+
+
+/* .summary-card-label {
+  font-size: 9px;
+
+  color: #c95b00;
+} */
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+/* .payment-filters {
+  display: flex;
+
+  gap: 5px;
+
+  margin-bottom: 14px;
+} */
+
+
+/* .payment-filter {
+  height: 27px;
+
+  padding: 0 12px;
+
+  border: 1px solid #f0dfaa;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #777;
+
+  font-size: 10px;
+
+  cursor: pointer;
+} */
+
+
+/* .payment-filter.active {
+  background: #ff6500;
+
+  border-color: #ff6500;
+
+  color: white;
+} */
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+/* .payments-table-card {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: white;
+
+  border: 1px solid #f1e4b8;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 2px 5px rgba(100, 80, 20, 0.06);
+} */
+
+
+/* .payments-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+} */
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+/* .payments-table thead {
+  background: #fffbed;
+}
+
+
+.payments-table th {
+  height: 37px;
+
+  padding: 0 14px;
+
+  text-align: left;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  color: #b84f00;
+
+  white-space: nowrap;
+} */
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+/* .payments-table td {
+  height: 58px;
+
+  padding: 7px 14px;
+
+  border-top: 1px solid #f5f1e5;
+
+  font-size: 11px;
+
+  color: #555;
+}
+
+
+.payment-customer {
+  display: block;
+
+  max-width: 90px;
+
+  line-height: 1.35;
+
+  color: #444;
+}
+
+
+.payment-date {
+  color: #777;
+
+  font-size: 10px;
+
+  line-height: 1.3;
+}
+
+
+.payment-type-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 10px;
+
+  background: #fff6cf;
+
+  border: 1px solid #f6e7a9;
+
+  color: #d99b00;
+
+  font-size: 9px;
+}
+
+
+.payment-amount {
+  color: #ff4d00;
+
+  font-size: 11px;
+}
+
+
+.payment-method-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 9px;
+
+  border-radius: 10px;
+
+  font-size: 9px;
+
+  background: #dce9ff;
+
+  color: #3e78c4;
+}
+
+
+.payment-txn {
+  color: #aaa;
+
+  font-size: 10px;
+}
+
+
+.payment-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 10px;
+
+  font-size: 9px;
+}
+
+
+.payment-status.completed {
+  background: #d8f8df;
+
+  color: #149447;
+}
+
+
+.payment-status.pending {
+  background: #ffdcdc;
+
+  color: #e23c3c;
+} */
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+/* .payment-view-btn {
+  height: 25px;
+
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #fff4bd;
+
+  color: #bd8700;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+.payment-view-btn:hover {
+  background: #ffed91;
+} */
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+/* .no-payments {
+  text-align: center !important;
+
+  color: #999 !important;
+
+  padding: 30px !important;
+} */
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .payment-summary-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .payments-page {
+    padding: 15px 10px;
+  }
+
+  .payment-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .payments-page-header {
+    gap: 10px;
+  }
+
+}
+
+/* ========================================================================
+  PAYMENT MODAL CSS
+  ====================================================================== */
+/* =========================================
+   OVERLAY
+========================================= */
+
+/* .payment-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.76);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+
+  z-index: 9999;
+} */
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+/* .payment-modal {
+  width: 100%;
+
+  max-width: 405px;
+
+  max-height: 95vh;
+
+  overflow-y: auto;
+
+  background: #fff;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+} */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* .payment-modal-header {
+  height: 61px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #f1eadb;
+}
+
+
+.payment-modal-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #333;
+
+  font-size: 14px;
+} */
+
+
+/* .payment-modal-title svg {
+  color: #ff6500;
+}
+
+
+.payment-modal-close {
+  border: none;
+
+  background: transparent;
+
+  color: #999;
+
+  cursor: pointer;
+} */
+
+
+/* =========================================
+   FORM
+========================================= */
+
+/* .payment-modal-form {
+  padding: 17px 18px 0;
+}
+
+
+.payment-form-section {
+  margin-bottom: 13px;
+}
+
+
+.payment-form-section > label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 9px;
+
+  color: #e85d04;
+
+  text-transform: uppercase;
+} */
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+/* .payment-form-section select,
+.payment-form-section input,
+.payment-form-section textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #f2dc8b;
+
+  border-radius: 9px;
+
+  background: white;
+
+  outline: none;
+
+  color: #444;
+
+  font-size: 11px;
+} */
+
+
+/* .payment-form-section select,
+.payment-form-section input {
+  height: 34px;
+
+  padding: 0 11px;
+} */
+
+/* 
+.payment-form-section textarea {
+  padding: 9px 11px;
+
+  resize: none;
+}
+
+
+.payment-form-section select:focus,
+.payment-form-section input:focus,
+.payment-form-section textarea:focus {
+  border-color: #ff6500;
+} */
+
+
+/* =========================================
+   PAYMENT TYPE
+========================================= */
+
+/* .payment-type-options {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+} */
+
+
+/* .payment-type-option {
+  height: 29px;
+
+  padding: 0 11px;
+
+  border: 1px solid #f1dc92;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #777;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+.payment-type-option.active {
+  background: #ff6500;
+
+  border-color: #ff6500;
+
+  color: white;
+} */
+
+
+/* =========================================
+   TWO COLUMNS
+========================================= */
+
+/* .payment-two-column {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+} */
+
+
+/* =========================================
+   PAYMENT METHOD
+========================================= */
+
+/* .payment-method-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+} */
+
+
+/* .payment-method-option {
+  height: 53px;
+
+  border: 1px solid #f1dc92;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #777;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+} */
+
+
+/* .payment-method-option svg {
+  color: #777;
+}
+
+
+.payment-method-option.active {
+  border: 2px solid #ff6500;
+
+  color: #ff6500;
+
+  background: #fffaf4;
+}
+
+
+.payment-method-option.active svg {
+  color: #ff6500;
+} */
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* .payment-modal-footer {
+  margin: 16px -18px 0;
+
+  padding: 13px 18px;
+
+  border-top: 1px solid #f1eadb;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+} */
+
+
+/* .payment-cancel-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #666;
+
+  font-size: 11px;
+
+  cursor: pointer;
+} */
+
+
+/* .payment-save-btn {
+  height: 33px;
+
+  padding: 0 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #ff6500;
+
+  color: white;
+
+  font-size: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  cursor: pointer;
+} */
+
+/* ==========================================================================
+  PAYMENT DETAIL MODAL CSS
+  ======================================================================= */
+/* =========================================
+   OVERLAY
+========================================= */
+
+/* .payment-detail-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.76);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+
+  z-index: 10000;
+} */
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+/* .payment-detail-modal {
+  width: 100%;
+
+  max-width: 405px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+} */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* .payment-detail-header {
+  height: 62px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #f1eadb;
+}
+
+
+.payment-detail-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #333;
+
+  font-size: 14px;
+} */
+
+
+/* .payment-detail-title svg {
+  color: #ff6500;
+}
+
+
+.payment-detail-close {
+  border: none;
+
+  background: transparent;
+
+  color: #999;
+
+  cursor: pointer;
+} */
+
+
+/* =========================================
+   BODY
+========================================= */
+
+/* .payment-detail-body {
+  padding: 17px 18px;
+} */
+
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+/* .payment-detail-customer {
+  min-height: 65px;
+
+  padding: 10px 14px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #fffbea;
+
+  border-radius: 10px;
+
+  margin-bottom: 14px;
+} */
+
+
+/* .payment-customer-avatar {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffab00;
+
+  color: white;
+
+  font-size: 13px;
+} */
+
+
+/* .payment-customer-info {
+  flex: 1;
+} */
+
+
+/* .payment-detail-name {
+  color: #444;
+
+  font-size: 13px;
+
+  margin-bottom: 2px;
+} */
+
+
+/* .payment-detail-date {
+  color: #e85d04;
+
+  font-size: 9px;
+} */
+
+
+/* .detail-status {
+  padding: 4px 9px;
+
+  border-radius: 10px;
+
+  font-size: 9px;
+} */
+
+
+/* .detail-status.completed {
+  background: #d8f8df;
+
+  color: #149447;
+} */
+
+
+/* .detail-status.pending {
+  background: #ffdcdc;
+
+  color: #e23c3c;
+} */
+
+
+/* =========================================
+   DETAILS GRID
+========================================= */
+
+/* .payment-details-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+} */
+
+
+/* .payment-detail-box {
+  min-height: 63px;
+
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  border-radius: 9px;
+
+  background: #fffbea;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.payment-detail-box span {
+  color: #d75b00;
+
+  font-size: 9px;
+
+  margin-bottom: 5px;
+}
+
+
+.payment-detail-box strong {
+  color: #444;
+
+  font-size: 12px;
+
+  font-weight: 400;
+} */
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* .payment-detail-footer {
+  height: 65px;
+
+  padding: 0 18px;
+
+  border-top: 1px solid #f1eadb;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+} */
+
+
+/* .payment-detail-footer button {
+  border: none;
+
+  background: transparent;
+
+  color: #666;
+
+  font-size: 11px;
+
+  cursor: pointer;
+} */
+
+/* ========================================================================================
+  Mayuri's Style code { Start }
+ ========================================================================================= */
+
+ /* ============ PAGE WRAPPER ============ */
+/* .page-inner {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+} */
+
+/* .page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c1810;
+}
+
+.page-title svg {
+  color: var(--brand-orange);
+  width: 20px;
+  height: 20px;
+} */
+
+/* ============ BUTTONS ============ */
+/* .btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-orange);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+} */
+/* .btn-primary:hover {
+  background: #e85d00;
+}
+
+.btn-cancel {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-cancel:hover {
+  color: #555555;
+} */
+
+/* .btn-save {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-orange);
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-save:hover {
+  background: #e85d00;
+} */
+
+/* ============ SUMMARY CARDS ============ */
+/* .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+} */
+
+/* .summary-card {
+  background: #ffffff;
+  border: 1px solid #f3eac2;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.summary-card svg {
+  color: var(--brand-orange);
+  width: 22px;
+  height: 22px;
+  margin-bottom: 10px;
+} */
+
+/* .summary-card .value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.summary-card .label {
+  font-size: 13px;
+  color: #bb4d00;
+} */
+
+/* ============ FILTER PILLS ============ */
+/* .filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+} */
+
+/* .filter-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff085;
+  color: #7a4a00;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+} */
+/* .filter-pill:hover {
+  background: #ffe66d;
+} */
+/* .filter-pill.active {
+  background: var(--brand-orange);
+  color: #ffffff;
+} */
+
+/* ============ DATA TABLE ============ */
+/* .data-table-wrap {
+  background: #ffffff;
+  border: 1px solid #f3eac2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.data-table-scroll {
+  overflow-x: auto;
+} */
+
+/* table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+} */
+
+/* .data-table thead tr {
+  background: #fffbf0;
+} */
+
+/* .data-table th {
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #bb4d00;
+  text-align: left;
+  letter-spacing: 0.03em;
+} */
+
+/* .data-table td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #444444;
+  border-top: 1px solid #f5efd9;
+}
+
+.data-table tbody tr:hover {
+  background: #fffdf7;
+} */
+
+/* .empty-row {
+  padding: 40px;
+  text-align: center;
+  color: #a6a09b;
+} */
+
+/* ============ BADGES ============ */
+/* .badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.badge-green { background: #dff6e8; color: #39a66b; }
+.badge-red   { background: #fde1e5; color: #d06a75; }
+.badge-blue  { background: #e7f0ff; color: #5278ad; }
+.badge-amber { background: #fff0c7; color: #b45309; }
+.badge-gray  { background: #f3f3f3; color: #666666; } */
+
+/* ============ ACTION BUTTONS ============ */
+/* .action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-right: 8px;
+}
+.action-edit   { background: #fff0dc; color: #bb4d00; }
+.action-edit:hover   { background: #ffe5c7; }
+.action-delete { background: #fde3e5; color: #d76b75; }
+.action-delete:hover { background: #fbd3d7; }
+.action-view   { background: #fff8ea; color: #bb4d00; }
+.action-view:hover   { background: #fff0d9; } */
+
+/* ============ MODAL ============ */
+/* .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 200;
+} */
+
+/* .modal-box {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.modal-box.modal-wide {
+  max-width: 640px;
+} */
+
+/* .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #fdebc8;
+}
+.modal-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+} */
+/* .modal-header svg {
+  color: var(--brand-orange);
+} */
+
+/* .modal-close {
+  background: none;
+  border: none;
+  color: #999999;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+}
+.modal-close:hover {
+  background: #f5f5f5;
+  color: #666666;
+} */
+
+/* .modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+/* .modal-body.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+} */
+
+/* .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px 24px;
+  border-top: 1px solid #fdebc8;
+} */
+
+/* .field-full {
+  grid-column: 1 / -1;
+} */
+
+/* ============ FORM FIELDS ============ */
+/* .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+} */
+/* .field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+} */
+/* .field input,
+.field select {
+  width: 100%;
+  border: 1px solid #fce3b0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  transition: 0.2s ease;
+  background: #ffffff;
+  font-family: inherit;
+}
+.field input:focus,
+.field select:focus {
+  border-color: var(--brand-orange);
+  box-shadow: 0 0 0 3px rgba(255, 105, 0, 0.1);
+} */
+
+/* ============ OPTION GRIDS (tiffin type / payment) ============ */
+/* .option-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+} */
+/* .option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #fce3b0;
+  border-radius: 12px;
+  padding: 16px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #777777;
+  cursor: pointer;
+  background: #ffffff;
+  transition: 0.2s ease;
+} */
+/* .option-card svg {
+  width: 20px;
+  height: 20px;
+} */
+/* .option-card.selected {
+  border-color: var(--brand-orange);
+  background: #fff4e5;
+  color: var(--brand-orange);
+} */
+
+/* .option-row-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+} */
+/* .option-pill {
+  border: 1px solid #fce3b0;
+  border-radius: 12px;
+  padding: 10px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666;
+  cursor: pointer;
+  background: #ffffff;
+  transition: 0.2s ease;
+} */
+/* .option-pill.selected {
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: #ffffff;
+} */
+
+/* ============ SETTINGS PAGE ============ */
+/* .settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .settings-grid { grid-template-columns: 1fr; }
+}
+
+.settings-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+} */
+/* .settings-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+.settings-card .field {
+  margin-bottom: 16px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  
+  margin-bottom: 12px;
+}
+.checkbox-row input {
+  
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+  border: 1px solid #d6d0c8;
+  border-radius: 4px;
+
+  cursor: pointer;
+  position: relative;
+} */
+
+/* .checkbox-row input:checked {
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
+}
+
+.checkbox-row input:checked::after {
+  content: "✓";
+
+  position: absolute;
+  left: 3px;
+  top: -2px;
+
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.field label {
+  color: #0f0e0e;
+}
+
+ .admin-profile-page {
+  width: 100%;
+  max-width: 9330px;
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+} */
+/* .profile-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  color: var(--brand-orange);
+  font-size: 14px;
+  font-weight: 500;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  padding: 0;
+  margin-bottom: 20px;
+} */
+
+/* .profile-back:hover {
+  color: #e85d00;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.profile-avatar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+} */
+
+/* .profile-avatar-box {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffb347, #ff6900);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+} */
+
+/* .profile-avatar-edit {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+} */
+
+/* .profile-name { font-size: 18px; font-weight: 600; color: #222222; }
+.profile-role { font-size: 14px; color: var(--brand-orange); font-weight: 500; margin-top: 2px; }
+.profile-verified {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #16a34a;
+  margin-top: 4px;
+}
+
+.profile-edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffedd5;
+  color: #ea580c;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+} */
+
+/* .profile-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.profile-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+} */
+
+/* .profile-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .profile-fields { grid-template-columns: 1fr; }
+} */
+
+/* .profile-field label {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 6px;
+} */
+/* .profile-field .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fef3e2;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333333;
+}
+.profile-field .locked {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+} */
+
+/* .logout-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background: #dc2626;
+} */
+
+/* ============ LOGOUT MODAL ============ */
+/* .logout-modal {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+} */
+/* .logout-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.logout-icon-inner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  font-size: 20px;
+  font-weight: 700;
+} */
+/* .logout-title { font-size: 20px; font-weight: 600; color: #222222; margin-bottom: 8px; }
+.logout-desc { font-size: 14px; color: #888888; margin-bottom: 20px; }
+.logout-actions { display: flex; gap: 16px; }
+.logout-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-logout-cancel { background: #f8efc4; border: 1px solid #e5e5e5; color: #666666; }
+.btn-logout-confirm { background: #ef4444; color: #ffffff; } */
+
+
+/* =========================================================
+   TIFFIN MANAGEMENT PAGE
+========================================================= */
+
+/* .tiffin-page {
+  width: 100%;
+  min-height: calc(100vh - 105px);
+  background: #FFFBF0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tiffin-container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+} */
+
+/* ---------- Header ---------- */
+
+/* .tiffin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+
+.tiffin-page {
+  width: 100%;
+  min-height: calc(100vh - 105px);
+  background: #FFFBF0;
+  padding: 6px;
+  box-sizing: border-box;
+} */
+
+/* .tiffin-container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.tiffin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+} */
+
+/* Same size as Daily Customers title */
+/* .tiffin-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2C1810;
+}
+
+.tiffin-title svg {
+  width: 18px;
+  height: 20px;
+  color: #FF6900;
+  stroke-width: 2;
+  flex-shrink: 0;
+} */
+
+/* Add Tiffin Order button */
+/* .tiffin-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 40px;
+  padding: 0 11px;
+  background: #FF6900;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+} */
+
+/* .tiffin-add-btn:hover {
+  background: #E85D00;
+}
+
+.tiffin-add-btn svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+} */
+
+
+
+
+/* =========================================================
+   TIFFIN TABLE
+========================================================= */
+
+/* .tiffin-table-wrap {
+  width: 100%;
+  background: #FFFFFF;
+
+  border: 1px solid #F3EAC2;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.tiffin-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+} */
+
+/* .tiffin-table {
+  width: 100%;
+  min-width: 1100px;
+
+  border-collapse: collapse;
+  table-layout: auto;
+
+  text-align: left;
+} */
+
+
+/* ---------- Table Header ---------- */
+
+/* .tiffin-table thead tr {
+  background: #FFFBEA;
+} */
+
+/* .tiffin-th {
+  padding: 7px 10px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  color: #BB4D00;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #F3EAC2;
+} */
+
+
+/* ---------- Table Body ---------- */
+
+/* .tiffin-table tbody tr {
+  border-top: 1px solid #F3EAC2;
+  transition: background 0.15s ease;
+}
+
+.tiffin-table tbody tr:hover {
+  background: #FFFDF7;
+}
+
+.tiffin-table td {
+  padding: 7px 10px;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+  vertical-align: middle;
+
+  color: #2C1810;
+} */
+
+
+/* ---------- Customer ---------- */
+
+/* .tiffin-table td:first-child {
+  font-weight: 600;
+  color: #2C1810;
+} */
+
+
+/* ---------- Type ---------- */
+
+/* .tiffin-table td:nth-child(2) {
+  color: #79716B;
+} */
+
+
+/* ---------- Meal ---------- */
+
+/* .tiffin-table td:nth-child(3) {
+  color: #2C1810;
+} */
+
+
+/* ---------- Quantity ---------- */
+
+/* .tiffin-table td:nth-child(4) {
+  color: #2C1810;
+} */
+
+
+/* ---------- Date ---------- */
+
+/* .tiffin-table td:nth-child(5) {
+  color: #79716B;
+} */
+
+
+/* ---------- Amount ---------- */
+
+/* .tiffin-table td:nth-child(6) {
+  color: #FF6900;
+  font-weight: 600;
+} */
+
+
+/* =========================================================
+   PAYMENT / STATUS BADGES
+========================================================= */
+
+/* .tiffin-table .inline-flex {
+  padding: 3px 9px;
+  font-size: 12px;
+  border-radius: 999px;
+} */
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+/* .tiffin-table td:last-child {
+  padding-right: 10px;
+}
+
+.tiffin-table td:last-child > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+} */
+
+/* .tiffin-table td:last-child button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  height: 28px;
+  padding: 0 9px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.tiffin-table td:last-child button svg {
+  width: 13px;
+  height: 13px;
+} */
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+/* .modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+
+  z-index: 200;
+} */
+
+/* .modal-box {
+  width: 100%;
+  max-width: 480px;
+
+  background: #FFFFFF;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+.modal-box.modal-wide {
+  max-width: 640px;
+} */
+
+/* .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #FDEBC8;
+}
+
+.modal-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #222222;
+} */
+
+/* .modal-header h2 svg {
+  color: #FF6900;
+} */
+
+/* .modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  background: none;
+  border: none;
+
+  color: #999999;
+
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.modal-close:hover {
+  background: #F5F5F5;
+  color: #666666;
+} */
+
+
+/* ---------- Modal Body ---------- */
+
+/* .modal-body {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+} */
+
+/* .modal-body.grid-2 {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px 16px;
+} */
+
+
+/* ---------- Form Fields ---------- */
+
+/* .field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #000000;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+} */
+
+/* .field input,
+.field select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  height: 40px;
+
+  padding: 8px 12px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #FCE3B0;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  color: #000000;
+} */
+
+/* .field input:focus,
+.field select:focus {
+  border-color: #FF6900;
+
+  box-shadow: 0 0 0 3px rgba(255, 105, 0, 0.1);
+} */
+--------------------------------------------------
+/* ================================
+   TIFFIN MANAGEMENT PAGE
+================================ */
+
+/* .tiffin-page {
+  width: 100%;
+  min-height: calc(100vh - 95px);
+  background: #fffaf0;
+  padding: 28px 32px 40px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.tiffin-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+} */
+
+/* ================================
+   HEADER
+================================ */
+
+/* .tiffin-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+} */
+ 
+
+/* ================================
+   TABLE WRAPPER
+================================ */
+
+/* .tiffin-table-wrap {
+  width: 100%;
+  background: #ffffff;
+
+  border: 1px solid #f3eac2;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 3px 10px rgba(120, 80, 20, 0.08);
+}
+
+.tiffin-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+} */
+
+/* ================================
+   TABLE
+================================ */
+
+/* .tiffin-table {
+  width: 100%;
+  min-width: 0 !important;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  text-align: left;
+} */
+
+/* ================================
+   COLUMN WIDTHS
+================================ */
+
+/* .tiffin-table th:nth-child(1),
+.tiffin-table td:nth-child(1) {
+  width: 16%;
+}
+
+.tiffin-table th:nth-child(2),
+.tiffin-table td:nth-child(2) {
+  width: 12%;
+}
+
+.tiffin-table th:nth-child(3),
+.tiffin-table td:nth-child(3) {
+  width: 10%;
+}
+
+.tiffin-table th:nth-child(4),
+.tiffin-table td:nth-child(4) {
+  width: 6%;
+}
+
+.tiffin-table th:nth-child(5),
+.tiffin-table td:nth-child(5) {
+  width: 11%;
+} */
+
+/* .tiffin-table th:nth-child(6),
+.tiffin-table td:nth-child(6) {
+  width: 9%;
+}
+
+.tiffin-table th:nth-child(7),
+.tiffin-table td:nth-child(7) {
+  width: 9%;
+}
+
+.tiffin-table th:nth-child(8),
+.tiffin-table td:nth-child(8) {
+  width: 10%;
+}
+
+.tiffin-table th:nth-child(9),
+.tiffin-table td:nth-child(9) {
+  width: 17%;
+} */
+
+/* ================================
+   TABLE HEADER
+================================ */
+
+/* .tiffin-th {
+  height: 58px;
+
+  padding: 0 20px;
+
+  background: #fffbea;
+
+  color: #bb4d00;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #f3eac2;
+} */
+
+/* ================================
+   TABLE BODY
+================================ */
+
+/* .tiffin-table tbody tr {
+  height: 92px;
+}
+
+.tiffin-table tbody tr:hover {
+  background: #fffdf7;
+} */
+
+/* .tiffin-table tbody td {
+  padding: 0 20px;
+
+  font-size: 16px;
+
+  color: #2c1810;
+
+  border-bottom: 1px solid #f3eac2;
+
+  vertical-align: middle;
+
+  overflow: hidden;
+} */
+
+/* .tiffin-table tbody tr:last-child td {
+  border-bottom: none;
+} */
+
+/* Customer */
+
+/* .tiffin-table tbody td:nth-child(1) {
+  font-weight: 600;
+  color: #2c1810;
+} */
+
+/* Type */
+
+/* .tiffin-table tbody td:nth-child(2) {
+  color: #79716b;
+} */
+
+/* Meal */
+
+/* .tiffin-table tbody td:nth-child(3) {
+  color: #2c1810;
+} */
+
+/* Date */
+
+/* .tiffin-table tbody td:nth-child(5) {
+  color: #79716b;
+  white-space: nowrap;
+} */
+
+/* Amount */
+
+/* .tiffin-table tbody td:nth-child(6) {
+  color: #ff6900;
+  font-weight: 600;
+} */
+
+/* ================================
+   BADGES
+================================ */
+
+/* .tiffin-table td span {
+  white-space: nowrap;
+} */
+
+/* ================================
+   ACTIONS
+================================ */
+
+/* .tiffin-table td:last-child {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  overflow: visible;
+}
+
+.tiffin-table td:last-child > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  flex-wrap: nowrap;
+
+  width: 100%;
+} */
+
+/* .tiffin-table td:last-child button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  height: 34px;
+
+  padding: 0 10px;
+
+  border: none;
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+.tiffin-table td:last-child button:first-child {
+  background: #fff0d9;
+  color: #bb4d00;
+}
+
+.tiffin-table td:last-child button:first-child:hover {
+  background: #ffe4bf;
+}
+
+.tiffin-table td:last-child button:last-child {
+  background: #fff8ea;
+  color: #bb4d00;
+}
+
+.tiffin-table td:last-child button:last-child:hover {
+  background: #fff0d9;
+}
+
+.tiffin-table td:last-child button svg {
+  width: 14px;
+  height: 14px;
+} */
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+  .tiffin-page {
+    padding: 24px;
+  }
+
+  .tiffin-title {
+    font-size: 24px;
+  }
+
+  .tiffin-table {
+    min-width: 1050px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tiffin-page {
+    padding: 20px 16px 30px;
+  }
+
+  .tiffin-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .tiffin-title {
+    font-size: 21px;
+  }
+
+  .tiffin-add-btn {
+    height: 46px;
+    padding: 0 18px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .tiffin-table {
+    min-width: 1050px !important;
+  }
+}
+
+/* ---------add tiffin order----- */
+/* .modal-box .field > label {
+  color: #c96015;
+  font-weight: 600;
+} */
+
+/* ========================================================================================
+  Mayuri's Style code { End }
+ ========================================================================================= */

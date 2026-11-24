@@ -1,0 +1,880 @@
+
+/* add new customer */
+/* .add-customer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.72);
+} */
+
+/* model */
+
+/* .add-customer-modal {
+  width: 350px;
+  height: 554px;
+
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  color: #2c1810;
+
+  font-family: Arial, sans-serif;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+ / NO transform / NO zoom /
+} */
+
+/* header */
+
+/* .add-customer-header {
+  height: 38px;
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eee7dd;
+} */
+
+/* .add-customer-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+} */
+
+/* .add-customer-heading span {
+  color: #ff6900;
+  font-size: 9px;
+} */
+
+/* .add-customer-heading h2 {
+  margin: 0;
+
+  color: #2c1810;
+
+  font-size: 10px;
+  font-weight: 500;
+} */
+
+/* .close-add-customer {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #e5ddd2;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #79716b;
+
+  font-size: 11px;
+
+  cursor: pointer;
+} */
+
+/* body */
+
+/* .add-customer-body {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 9px 10px 5px;
+
+  box-sizing: border-box;
+}
+
+.add-customer-body::-webkit-scrollbar {
+  width: 3px;
+}
+
+.add-customer-body::-webkit-scrollbar-thumb {
+  background: #ddd6ce;
+  border-radius: 5px;
+} */
+
+/* section */
+
+/* .customer-form-section {
+  margin: 0 0 6px;
+} */
+
+/* .customer-form-section h3,
+.coupon-section-title h3 {
+  margin: 0 0 4px;
+
+  color: #bb4d00;
+
+  font-size: 7px;
+  font-weight: 500;
+} */
+
+/* form */
+
+/* .form-grid-two {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6px;
+}
+
+.form-field {
+  margin-bottom: 4px;
+} */
+
+/* .form-field label {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #79716b;
+
+  font-size: 6px;
+} */
+
+/* .form-field input {
+  width: 100%;
+  height: 20px;
+
+  padding: 0 6px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ffdc73;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #2c1810;
+
+  font-size: 7px;
+}
+
+.form-field input::placeholder {
+  color: #a6a09b;
+}
+
+.form-field input:focus {
+  border-color: #ffb900;
+} */
+
+/* customer type */
+
+/* .option-row {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  flex-wrap: nowrap;
+
+  box-sizing: border-box;
+} */
+
+/* .option-button {
+  height: 19px;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 6px;
+
+  box-sizing: border-box;
+
+  white-space: nowrap;
+
+  border: 1px solid #e5ddd2;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #79716b;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+} */
+
+
+/* Exact widths for Customer Type buttons */
+
+/* .option-row .option-button:nth-child(1) {
+  width: 42px;
+} */
+
+/* .option-row .option-button:nth-child(2) {
+  width: 36px;
+}
+
+.option-row .option-button:nth-child(3) {
+  width: 61px;
+}
+
+.option-row .option-button:nth-child(4) {
+  width: 36px;
+}
+
+.option-row .option-button:nth-child(5) {
+  width: 53px;
+} */
+
+/* active */
+
+/* .option-button.active {
+  border-color: #ff6900;
+
+  background: #ff6900;
+
+  color: #ffffff;
+} */
+
+/* meal selection */
+
+/* .meal-checkbox-row {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+} */
+
+/* .meal-checkbox {
+  display: flex;
+  align-items: center;
+
+  gap: 3px;
+
+  color: #79716b;
+
+  font-size: 7px;
+
+  cursor: pointer;
+} */
+
+/* .meal-checkbox input {
+  width: 8px;
+  height: 8px;
+
+  margin: 0;
+
+  accent-color: #ff6900;
+} */
+
+/* coupon allocation  */
+
+/* .coupon-allocation-box {
+  margin: 3px 0 7px;
+
+  border: 1px solid #ffe28a;
+
+  border-radius: 7px;
+
+  background: #fffdf2;
+
+  box-sizing: border-box;
+} */
+
+/* .coupon-section-title {
+  padding: 6px 8px 0;
+} */
+/* 
+.coupon-inner {
+  padding: 0 8px 6px;
+} */
+
+/* .coupon-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+} */
+
+/* .coupon-top-row span {
+  color: #79716b;
+
+  font-size: 7px;
+} */
+
+/* .coupon-top-row strong {
+  min-width: 24px;
+  height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 8px;
+
+  background: #ff6900;
+
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 500;
+} */
+
+
+/* Coupon buttons */
+
+/* .coupon-options {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  flex-wrap: nowrap;
+} */
+
+/* .coupon-option {
+  width: 31px;
+  height: 20px;
+
+  min-width: 31px;
+
+  flex: 0 0 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  white-space: nowrap;
+
+  border: 1px solid #e5ddd2;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #79716b;
+
+  font-size: 6px;
+
+  line-height: 1;
+
+  cursor: pointer;
+} */
+
+/* .coupon-option.active {
+  border-color: #ff6900;
+
+  background: #ff6900;
+
+  color: #ffffff;
+} */
+
+/* coupon controls  */
+
+/* .coupon-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  flex-wrap: nowrap;
+} */
+
+/* .coupon-controls button:first-of-type {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.coupon-controls button:last-of-type {
+  width: auto;
+  min-width: 150px;
+  height: 36px;
+  padding: 0 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+} */
+
+/* .coupon-controls span {
+  white-space: nowrap;
+  flex-shrink: 0;
+} */
+/* coupon note */
+
+/* .coupon-note {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin-top: 5px;
+
+  min-height: 16px;
+
+  padding: 4px 6px;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  background: #fff4b8;
+}
+
+.coupon-note span {
+  color: #bb4d00;
+
+  font-size: 6px;
+} */
+
+/* .coupon-note p {
+  margin: 0;
+
+  color: #79716b;
+
+  font-size: 6px;
+
+  line-height: 8px;
+} */
+
+/* subscription  */
+
+.customer-form-section:nth-of-type(5) {
+  margin-bottom: 6px;
+}
+
+.customer-form-section:nth-of-type(5) .form-field {
+  margin-bottom: 4px;
+}
+
+/* payment section  */
+
+/* .payment-section .option-row {
+  gap: 4px;
+} */
+
+/* .payment-section .option-button {
+  width: auto !important;
+
+  min-width: 0;
+
+  height: 19px;
+
+  padding: 0 7px;
+} */
+
+/* footer  */
+
+/* .add-customer-footer {
+  width: 100%;
+  height: 38px;
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  border-top: 1px solid #eee7dd;
+
+  background: #ffffff;
+} */
+
+/* .cancel-customer-button {
+  height: 20px;
+
+  flex: 0 0 auto;
+
+  padding: 0 5px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #79716b;
+
+  font-size: 7px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+} */
+
+/* .save-customer-button {
+  height: 20px;
+
+  min-width: 76px;
+
+  flex: 0 0 auto;
+
+  padding: 0 9px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #ff6900;
+
+  color: #ffffff;
+
+  font-size: 7px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.save-customer-button:hover {
+  background: #bb4d00;
+} */
+
+.customer-form-section:nth-of-type(5) h3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.customer-form-section:nth-of-type(5) h3 svg {
+  flex-shrink: 0;
+}
+
+/* small screen  */
+
+@media (max-width: 380px) {
+  .add-customer-modal {
+    width: calc(100vw - 20px);
+    height: auto;
+    max-height: calc(100vh - 20px);
+  }
+}
+
+/* add new customer  */
+
+/* modalL */
+
+.add-customer-modal {
+  width: 342px !important;
+  height: 550px !important;
+
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+
+  transform: none !important;
+  zoom: 1 !important;
+}
+
+/* body spacing  */
+
+.add-customer-body {
+  padding: 8px 9px 4px !important;
+}
+
+/* section spacing  */
+
+.customer-form-section {
+  margin-bottom: 6px !important;
+}
+
+.customer-form-section h3,
+.coupon-section-title h3 {
+  margin-bottom: 4px !important;
+}
+
+/* inputs  */
+
+.form-field {
+  margin-bottom: 4px !important;
+}
+
+.form-field input {
+  height: 20px !important;
+}
+
+/* customer type  */
+
+.option-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+
+.option-row .option-button {
+  height: 19px !important;
+
+  flex: 0 0 auto !important;
+
+  padding: 0 5px !important;
+
+  font-size: 7px !important;
+
+  white-space: nowrap !important;
+
+  box-sizing: border-box !important;
+}
+
+/* widths */
+
+.option-row .option-button:nth-child(1) {
+  width: 42px !important;
+}
+
+.option-row .option-button:nth-child(2) {
+  width: 36px !important;
+}
+
+.option-row .option-button:nth-child(3) {
+  width: 61px !important;
+}
+
+.option-row .option-button:nth-child(4) {
+  width: 36px !important;
+}
+
+.option-row .option-button:nth-child(5) {
+  width: 53px !important;
+}
+
+/* active customer type  */
+
+.option-row .option-button.active {
+  background: #ff6900 !important;
+  border-color: #ff6900 !important;
+  color: #ffffff !important;
+}
+
+/* meal selection  */
+
+.meal-checkbox-row {
+  gap: 11px !important;
+}
+
+.meal-checkbox {
+  gap: 3px !important;
+  font-size: 7px !important;
+}
+
+/* coupon box  */
+
+.coupon-allocation-box {
+  margin: 3px 0 7px !important;
+  border-radius: 7px !important;
+}
+
+.coupon-section-title {
+  padding: 6px 8px 0 !important;
+}
+
+.coupon-inner {
+  padding: 0 8px 6px !important;
+}
+
+.coupon-top-row {
+  margin-bottom: 5px !important;
+}
+
+/* coupon buttons  */
+
+.coupon-options {
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 4px !important;
+
+  flex-wrap: nowrap !important;
+}
+
+.coupon-option {
+  width: 31px !important;
+  min-width: 31px !important;
+  height: 20px !important;
+
+  flex: 0 0 31px !important;
+
+  font-size: 6px !important;
+}
+
+/* .coupon control  */
+
+.coupon-controls {
+  margin-top: 4px !important;
+  gap: 5px !important;
+}
+
+.coupon-controls button {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* coupon note  */
+
+.coupon-note {
+  margin-top: 5px !important;
+  padding: 4px 6px !important;
+  min-height: 16px !important;
+}
+
+.coupon-note p {
+  font-size: 6px !important;
+  line-height: 8px !important;
+}
+
+/* subscription  */
+
+.customer-form-section:nth-of-type(5) {
+  margin-bottom: 6px !important;
+}
+
+.customer-form-section:nth-of-type(5) .form-field {
+  margin-bottom: 4px !important;
+}
+
+/* payment method  */
+
+.payment-section {
+  margin-top: 1px !important;
+  margin-bottom: 0 !important;
+}
+
+.payment-section .option-row {
+  gap: 4px !important;
+}
+
+.payment-section .option-button {
+  width: auto !important;
+  height: 19px !important;
+
+  min-width: 0 !important;
+
+  padding: 0 7px !important;
+
+  font-size: 7px !important;
+}
+
+/* footer  */
+
+.add-customer-footer {
+  height: 38px !important;
+  min-height: 38px !important;
+
+  padding: 0 9px !important;
+
+  gap: 7px !important;
+
+  flex-shrink: 0 !important;
+}
+
+.cancel-customer-button {
+  height: 20px !important;
+
+  padding: 0 5px !important;
+
+  font-size: 7px !important;
+}
+
+.save-customer-button {
+  height: 20px !important;
+
+  min-width: 76px !important;
+
+  padding: 0 9px !important;
+
+  font-size: 7px !important;
+}
+
+.save-customer-button {
+  background-color: #ff6900 !important;
+  color: #ffffff !important;
+
+  border: none !important;
+  border-radius: 5px;
+
+  height: 20px;
+  min-width: 76px;
+
+  padding: 0 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  box-sizing: border-box;
+
+  font-size: 7px;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.save-customer-button svg {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+}
+
+.save-customer-button:hover {
+  background-color: #bb4d00 !important;
+}

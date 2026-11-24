@@ -1,0 +1,508 @@
+
+ /* customer details age  */
+/* .customer-details-page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px 24px;
+  background: #fffbf0;
+  color: #2c1810;
+  font-family: Arial, sans-serif;
+} */
+
+/* back button  */
+/* .back-customers-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 14px;
+  color: #bb4d00;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+} */
+
+/* .back-customers-button:hover {
+  color: #ff6900;
+} */
+
+/* top section  */
+/* .customer-details-top {
+  display: grid;
+  grid-template-columns: minmax(0, 2.15fr) minmax(210px, 1fr);
+  gap: 12px;
+  align-items: stretch;
+} */
+
+/* customer main card  */
+/* .customer-info-card {
+  min-width: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e5e0da;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(44, 24, 16, 0.06);
+} */
+
+/* customer header  */
+/* .customer-avatar-large {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #ffb900;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+} */
+
+/* .customer-info {
+  min-height: 48px;
+  padding-top: 1px;
+} */
+
+/* .customer-info h2 {
+  margin: 0 0 3px;
+  color: #2c1810;
+  font-size: 15px;
+  font-weight: 500;
+} */
+
+/* .customer-info p {
+  margin: 0;
+  color: #ff6900;
+  font-size: 9px;
+} */
+
+/* plan badge  */
+.customer-plan-badge,
+.customer-plan-select {
+  float: right;
+  margin-top: -39px;
+}
+
+/* .customer-plan-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 10px;
+  background: #fff085;
+  color: #bb4d00;
+  font-size: 8px;
+} */
+
+.customer-plan-select {
+  height: 25px;
+  padding: 0 6px;
+  border: 1px solid #ffb900;
+  border-radius: 6px;
+  background: #fff085;
+  color: #bb4d00;
+  font-size: 8px;
+  outline: none;
+}
+
+/* meta cards  */
+.customer-meta-cards {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.customer-meta-card {
+  min-height: 55px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 7px;
+  background: #fffbed;
+}
+
+.customer-meta-card span {
+  display: block;
+  margin-bottom: 3px;
+  color: #ff6900;
+  font-size: 9px;
+}
+
+.customer-meta-card small {
+  display: block;
+  margin-bottom: 4px;
+  color: #ff6900;
+  font-size: 8px;
+}
+
+.customer-meta-card strong {
+  display: block;
+  color: #2c1810;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+/* meal preferences  */
+.customer-meal-preferences {
+  margin-top: 9px;
+}
+
+.customer-meal-preferences > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff6900;
+  font-size: 8px;
+}
+
+.customer-meal-preferences button {
+  height: 18px;
+  margin-right: 5px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 10px;
+  background: #fff085;
+  color: #bb4d00;
+  font-size: 7px;
+  cursor: pointer;
+}
+
+.customer-meal-preferences button:hover {
+  background: #ffb900;
+}
+
+/* action buttons  */
+.customer-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.customer-detail-actions button {
+  height: 42px;
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 8px;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+.record-meal-button {
+  background: #00c853;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.edit-customer-button {
+  background: #fff0dc;
+  color: #bb4d00;
+  border: 1px solid #ffb900 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.add-payment-button {
+  background: #dbeafe;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.renew-button {
+  background: #f0e5ff;
+  color: #7c3aed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.save-customer-button {
+  background: #ff6900;
+  color: #ffffff;
+}
+
+.customer-detail-actions button:hover {
+  opacity: 0.85;
+}
+
+/* edit inputs  */
+.customer-edit-input {
+  display: block;
+  width: 150px;
+  height: 23px;
+  margin-bottom: 4px;
+  padding: 0 7px;
+  box-sizing: border-box;
+  border: 1px solid #a6a09b;
+  border-radius: 5px;
+  outline: none;
+  color: #2c1810;
+  font-size: 9px;
+}
+
+.customer-edit-input:focus {
+  border-color: #ffb900;
+}
+
+/* coupon balance  */
+.coupon-balance-card {
+  padding: 14px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e5e0da;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(44, 24, 16, 0.06);
+}
+
+.coupon-balance-card h3 {
+  margin: 0 0 13px;
+  color: #2c1810;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.coupon-balance-item {
+  margin-bottom: 12px;
+}
+
+.coupon-balance-item > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.coupon-balance-item span {
+  color: #bb4d00;
+  font-size: 8px;
+}
+
+.coupon-balance-item strong {
+  color: #2c1810;
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.coupon-progress {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #f0ece7;
+}
+
+.coupon-progress-fill {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.coupon-progress-fill.issued {
+  width: 100%;
+  background: #ffb900;
+}
+
+.coupon-progress-fill.used {
+  width: 67%;
+  background: #ff6900;
+}
+
+.coupon-progress-fill.remaining {
+  width: 33%;
+  background: #00c853;
+}
+
+.coupon-progress-fill.carry {
+  width: 33%;
+  background: #ffb900;
+}
+
+/* history card  */
+.customer-history-card {
+  margin-top: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e0da;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(44, 24, 16, 0.06);
+}
+
+/* history tabs  */
+.customer-history-tabs {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 10px;
+  border-bottom: 1px solid #e5e0da;
+}
+
+.history-tab {
+  height: 34px;
+  margin-right: 18px;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #79716b;
+  font-size: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.history-tab.active {
+  border-bottom-color: #ff6900;
+  color: #bb4d00;
+}
+
+/* meal history table  */
+.meal-history-table {
+  width: 100%;
+}
+
+.meal-history-header,
+.meal-history-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 0.8fr;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.meal-history-header {
+  height: 32px;
+  background: #fffbf0;
+  color: #bb4d00;
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.meal-history-row {
+  min-height: 32px;
+  border-bottom: 1px solid #f0ece7;
+  color: #79716b;
+  font-size: 8px;
+}
+
+.meal-history-row:last-child {
+  border-bottom: none;
+}
+
+.coupon-deducted,
+.coupon-none,
+.meal-present,
+.meal-absent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 7px;
+}
+
+.coupon-deducted {
+  background: #fff0dc;
+  color: #ff6900;
+}
+
+.coupon-none {
+  background: #f0f0f0;
+  color: #79716b;
+}
+
+.meal-present {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.meal-absent {
+  background: #ffe4e6;
+  color: #f43f5e;
+}
+
+/* empty history  */
+.empty-history {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-history p {
+  margin: 0 0 5px;
+  color: #2c1810;
+  font-size: 10px;
+}
+
+.empty-history span {
+  color: #a6a09b;
+  font-size: 8px;
+}
+
+/* responsive  */
+@media (max-width: 900px) {
+  .customer-details-top {
+    grid-template-columns: 1fr;
+  }
+
+  .coupon-balance-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-details-page {
+    padding: 12px;
+  }
+
+  .customer-meta-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-detail-actions {
+    flex-wrap: wrap;
+  }
+
+  .customer-detail-actions button {
+    flex: 1 1 45%;
+  }
+
+  .customer-history-tabs {
+    overflow-x: auto;
+  }
+
+  .history-tab {
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+}
+
+.meal-cell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

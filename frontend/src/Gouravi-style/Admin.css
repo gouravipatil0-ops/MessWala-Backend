@@ -1,0 +1,127 @@
+/* #parent7{
+    height:210px;
+    width:275px;
+    background-color:#FFFFFF;
+    border-radius:25px;
+    border:2px solid #FEF9C2;
+} */
+
+/* #parent7{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+
+    width: 260px;
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
+
+    z-index: 9999;
+
+    padding: 15px;
+} */
+
+/* #admin-close-btn{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+
+    border: none;
+    background: none;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    color: #666;
+} */
+
+/* #parent7-child1{
+    height:100px;
+
+    border:1px solid #FEF9C2;
+    background: linear-gradient(#FEFCE8,#FFF7ED);
+    border-radius:25px 25px 0px 0px;
+    display:flex;
+    align-items: center;
+} */
+/* #child1-part1{
+    height:80px;
+    width:70px;
+     border:2px solid red; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* #child1-part2{
+    height:80px;
+    width:150px;
+     border:2px solid red; 
+
+    align-items:center;
+} */
+/* #child1-part2-h2{
+    font-family:'Nunito';
+    font-weight:400;
+    font-size:16px;
+    font-style:normal;
+    color:#292524;
+    display:flex;
+    align-items:center;
+} */
+/* #child1-part2-p1{
+    font-family:'Nunito';
+    font-weight:400;
+    font-size:14px;
+    font-style:normal;
+    color:#BB4D00;
+    display:flex;
+    align-items:center;
+} */
+/* #child1-part2-p2{
+    font-family:'Nunito';
+    font-weight:400;
+    font-size:14px;
+    font-style:normal;
+    color:#A6A09B;
+    display:flex;
+} */
+/* #parent7-child2{
+    height:49px;
+    border:1px solid #FEF9C2;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+} */
+/* #child2-h2{
+    font-family:'Nunito';
+    font-weight:400;
+    font-size:18px;
+    font-style:normal;
+    color:#44403B;
+    margin-top: 10px;
+    display:flex;
+    padding-left: 10px;
+
+} */
+/* #parent7-child3{
+    height:49px;
+    width:100%;
+    border:2px solid yellow;
+    display:flex;
+    align-items: center;
+    padding-left: 25px;
+} */
+/* #child3-h2{
+    font-family:'Nunito';
+    font-weight:400;
+    font-size:18px;
+    font-style:normal;
+    color:#E7000B;
+    display:flex;
+    align-items:center;
+    padding-left: 10px;
+    padding-top: 10px;
+} */

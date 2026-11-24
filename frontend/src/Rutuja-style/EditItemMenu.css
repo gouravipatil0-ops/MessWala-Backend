@@ -1,0 +1,471 @@
+/* page */
+.edit-item-menu-page {
+  min-height: 100vh;
+  padding: 18px 32px 35px;
+  box-sizing: border-box;
+  background: #FFFBF0;
+  color: #2C1810;
+}
+
+/* page title */
+.edit-page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.edit-page-title span {
+  color: #FF6900;
+  font-size: 18px;
+}
+
+.edit-page-title h1 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* main box */
+.edit-menu-box {
+  width: 610px;
+  max-width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #A6A09B;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* header */
+.edit-menu-header {
+  height: 72px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFBF0;
+  box-sizing: border-box;
+}
+
+/* menu info */
+.edit-menu-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-menu-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #FFF085;
+  color: #FF6900;
+  font-size: 16px;
+}
+
+.edit-menu-info h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.edit-menu-info p {
+  margin: 3px 0 0;
+  font-size: 10px;
+  color: #FF6900;
+}
+
+/* actions */
+.edit-menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* tabs */
+.edit-menu-tabs {
+  display: flex;
+  border: 1px solid #A6A09B;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.edit-tab {
+  height: 30px;
+  padding: 0 14px;
+  border: none;
+  background: #FFFFFF;
+  color: #79716B;
+  font-size: 10px;
+}
+
+.edit-tab.active {
+  background: #FF6900;
+  color: #FFFFFF;
+}
+
+/* save button */
+.save-menu-button {
+  height: 30px;
+  padding: 0 13px;
+  border: 1px solid #A6A09B;
+  border-radius: 9px;
+  background: #FF6900;
+  color: #f9f5f2;
+  font-size: 10px;
+}
+
+/* breakfast card */
+.breakfast-edit-card {
+  padding: 16px;
+  border-top: 1px solid #A6A09B;
+  background: #FFFFFF;
+}
+
+.edit-meal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-meal-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-meal-name span {
+  color: #FF6900;
+  font-size: 16px;
+}
+
+.edit-meal-name h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2C1810;
+}
+
+.edit-price {
+  padding: 4px 9px;
+  border: 1px solid #A6A09B;
+  border-radius: 10px;
+  color: #BB4D00;
+  font-size: 10px;
+  background: #FFFFFF;
+}
+
+.edit-meal-time {
+  margin: 8px 0 10px;
+  color: #FF6900;
+  font-size: 10px;
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+}
+
+/* meal inputs */
+.edit-meal-card input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 7px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  border: 1px solid #A6A09B;
+  border-radius: 7px;
+
+  background: #FFFFFF;
+  color: #2C1810;
+  font-size: 10px;
+  outline: none;
+}
+
+.edit-meal-card input:focus {
+  border-color: #FF6900;
+}
+
+/* add item button */
+.add-item-button {
+  width: 100%;
+  height: 28px;
+  margin-top: 2px;
+
+  border: 1px dashed #A6A09B;
+  border-radius: 7px;
+
+  background: #FFFBF0;
+  color: #BB4D00;
+
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.add-item-button:hover {
+  background: #FFF085;
+}
+
+/* meal status */
+.edit-meal-status {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+}
+
+.edit-meal-status span {
+  color: #79716B;
+}
+
+.edit-meal-status strong {
+  color: #16A34A;
+  font-size: 9px;
+  font-weight: 500;
+  display: flex;
+  justify-content:left;
+  gap: 5px;
+}
+/* other meal cards */
+.lunch-edit-card,
+.dinner-edit-card,
+.tiffin-edit-card {
+  padding: 16px;
+  border-top: 1px solid #A6A09B;
+  background: #FFFFFF;
+}
+
+/* todays special */
+.edit-todays-special {
+  margin: 14px 16px 16px;
+  padding: 12px;
+  background: #FFF085;
+  border: 1px solid #A6A09B;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+.special-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.special-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2C1810;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.special-title span:first-child {
+  color: #FF6900;
+}
+
+.edit-special-button {
+  border: 1px solid #A6A09B;
+  border-radius: 7px;
+  padding: 4px 9px;
+  background: #FFFFFF;
+  color: #BB4D00;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.edit-todays-special textarea {
+  width: 100%;
+  min-height: 45px;
+  margin-top: 8px;
+  padding: 7px 9px;
+  box-sizing: border-box;
+  resize: none;
+
+  border: 1px solid #A6A09B;
+  border-radius: 7px;
+
+  background: #FFFFFF;
+  color: #BB4D00;
+  font-size: 10px;
+  line-height: 15px;
+  outline: none;
+}
+
+/* meal card spacing */
+.edit-meal-card {
+  box-sizing: border-box;
+}
+
+.edit-meal-card + .edit-meal-card {
+  border-top: 1px solid #A6A09B;
+}
+
+.save-menu-button {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-menu-button:hover {
+  background: #FFB900;
+  color: #2C1810;
+}
+
+/* save menu allignment */
+.save-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+/* meal cards grid */
+.edit-menu-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.edit-menu-header {
+  grid-column: 1 / -1;
+}
+
+.edit-meal-card {
+  border-top: 1px solid #A6A09B;
+}
+
+.edit-todays-special {
+  grid-column: 1 / -1;
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .edit-menu-box {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-menu-header,
+  .edit-todays-special {
+    grid-column: 1;
+  }
+}
+
+/* edit item row */
+
+.edit-item-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.edit-item-row input {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 7px;
+}
+
+.edit-item-row button {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-bottom: 7px;
+
+  border: 1px solid #A6A09B;
+  border-radius: 6px;
+
+  background: #FFFFFF;
+  color: #BB4D00;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-item-row button:hover {
+  background: #FFF085;
+}
+
+/* meal grid  */
+.edit-meal-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0 16px 14px;
+  box-sizing: border-box;
+}
+
+.edit-meal-card {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #A6A09B;
+  border-radius: 10px;
+  background: #FFFBF0;
+  box-sizing: border-box;
+}
+
+.edit-meal-card + .edit-meal-card {
+  border-top: 1px solid #A6A09B;
+}
+
+.edit-item-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.edit-item-row input {
+  flex: 1;
+  min-width: 0;
+  height: 24px;
+  margin-bottom: 5px;
+  padding: 0 8px;
+  border: 1px solid #FFB900;
+  border-radius: 5px;
+  background: #FFFFFF;
+  font-size: 9px;
+  box-sizing: border-box;
+}
+
+.edit-item-row button {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-bottom: 5px;
+  border: 1px solid #A6A09B;
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #BB4D00;
+  cursor: pointer;
+}
+
+.edit-item-row button:hover {
+  background: #FFF085;
+}
+
+.edit-meal-card .add-item-button {
+  height: 25px;
+  margin-top: 2px;
+}
+
+.edit-price {
+  width: 42px !important;
+  height: 22px !important;
+  margin: 0 !important;
+  padding: 0 5px !important;
+  text-align: center;
+  color: #BB4D00;
+  border: 1px solid #FFB900 !important;
+  border-radius: 10px !important;
+}
+
+@media (max-width: 800px) {
+  .edit-meal-grid {
+    grid-template-columns: 1fr;
+  }
+}
